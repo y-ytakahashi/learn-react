@@ -4,9 +4,11 @@ const Timer = () => {
   const [count, setCount] = useState(0);
   const time = () => {
     setCount((prCount) => prCount + 1);
+    console.log(count);
   };
   useEffect(() => {
     const interval = setInterval(time, 1000);
+
     return () => {
       clearInterval(interval);
       console.log("cleared");
